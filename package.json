@@ -2,7 +2,7 @@
   "name": "baivarufaker",
   "displayName": "BaivaruFaker",
   "description": "Lorem Ipsum but in Dhivehi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -14,7 +14,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:baivarufaker.baivaruFake"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -32,10 +34,12 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },
-  "devDependencies": {
-    "@types/vscode": "^1.82.0",
-    "@types/node": "16.x",
-    "typescript": "^5.1.6",
+  "dependencies": {
     "axios": "^0.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.82.0",
+    "typescript": "^5.1.6"
   }
 }
