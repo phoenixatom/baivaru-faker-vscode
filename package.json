@@ -1,0 +1,36 @@
+{
+  "name": "baivarufaker",
+  "displayName": "BaivaruFaker",
+  "description": "Lorem Ipsum but in Dhivehi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "baivarufaker.baivaruFake",
+        "title": "Lorem Ipsum in Dhivehi - BaivaruFake"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/node": "16.x",
+    "typescript": "^5.1.6",
+    "axios": "^0.21.4"
+  }
+}
